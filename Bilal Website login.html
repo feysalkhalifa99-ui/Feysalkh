@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilal with User Code</title>
+    <style>
+        body { font-family: Arial; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f0f2f5; }
+        .Bilal-container { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 300px; }
+        input { width: 100%; padding: 8px; margin: 8px 0 16px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #1877f2; color: white; border: none; padding: 10px; width: 100%; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #1558b0; }
+    </style>
+</head>
+<body>
+    <div class="Bilal-container">
+        <h2>Bilal</h2>
+        <form id="BilalForm">
+            <label for="userCode">Furtuu Fayyadama / Email</label>
+            <input type="text" id="userCode" placeholder="Enter your user code or email" required>
+            <label for="password">Furtuu</label>
+            <input type="password" id="password" placeholder="Enter password" required>
+            <button type="submit">Saaqi !</button>
+        </form>
+        <p id="message" style="color:red; margin-top:10px;"></p>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const userCode = document.getElementById('userCode').value;
+            const password = document.getElementById('password').value;
+
+            // Example validation (replace with real authentication)
+            if (userCode === "demo123" && password === "pass") {
+                alert("Login successful! Redirecting...");
+                // window.location.href = "/dashboard";
+            } else {
+                document.getElementById('message').innerText = "Invalid user code or password.";
+            }
+        });
+    </script>
+</body>
+</html>
